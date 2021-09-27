@@ -26,7 +26,6 @@ public class test extends AppCompatActivity {
         PhotoEditor mPhotoEditor;
 
 
-
 //Use custom font using latest support library
         Typeface mTextRobotoTf = ResourcesCompat.getFont(this, R.font.roboto_medium);
 

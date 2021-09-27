@@ -15,9 +15,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import org.techtown.dotoristagram.R;
 import org.techtown.dotoristagram.fragment.Frag1;
+import org.techtown.dotoristagram.photoediting.EditImageActivity;
 import org.techtown.dotoristagram.util.OnItemClickListener;
 import org.techtown.dotoristagram.util.imageEditItem;
 import org.techtown.dotoristagram.util.image_show_adapter;
@@ -45,7 +47,7 @@ public class image_show_activity extends AppCompatActivity {
     //상단 액션 바에 메뉴 생성
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.complete_menu, menu);
+        getMenuInflater().inflate(R.menu.complite_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -55,7 +57,7 @@ public class image_show_activity extends AppCompatActivity {
         int id = item.getItemId();
 
         //상단 완료 눌렀을때
-        if (id == R.id.action_complete) {
+        if (id == R.id.action_complite) {
 
             //새 게시물 추가 페이지에 들어가게 되며, 인텐트로 그 액티비티가 켜진다
             Intent intent = new Intent(getApplicationContext(), new_post_add_page.class); //수정 할 수 있는 페이지 열기
@@ -126,9 +128,8 @@ public class image_show_activity extends AppCompatActivity {
             public void onItemClick(RecyclerView.ViewHolder holder, View view, int position) {
                 edit_uri=null;
                 positions = position;
-                Intent intent = new Intent(getApplicationContext(), image_edit_activity.class); //수정 할 수 있는 페이지 열기
-                intent.putExtra("Uri", imageList.get(position).getImage_uri().toString());   //날짜 text값 넘겨주기
-                where = "게시물";
+                Intent intent = new Intent(getApplicationContext(), EditImageActivity.class); //수정 할 수 있는 페이지 열기
+                intent.putExtra("Uri", imageList.get(position).getImage_uri().toString());
                 startActivity(intent);
             }
 
@@ -136,6 +137,8 @@ public class image_show_activity extends AppCompatActivity {
             public void onItemLongClick(RecyclerView.ViewHolder holder, View view, int position) {
 
             }
+
+
         });
 
 

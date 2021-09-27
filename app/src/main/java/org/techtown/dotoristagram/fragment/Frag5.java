@@ -134,18 +134,18 @@ public class Frag5 extends Fragment {
             @Override
             public void onClick(View v) {
 
-
+/*
                 Intent intent = new Intent(getActivity(),test.class);
                 startActivity(intent);
+*/
 
-                /*
                 Intent intent = new Intent(Intent.ACTION_PICK);
                 intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE,true);
                 intent.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(intent, pick_from_Multi_album);
 
-                */
+
 
             }
         });
@@ -248,8 +248,8 @@ public class Frag5 extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        Log.d("온리쥼","프래그먼트 온리줌");
-        Log.d("유저 아이디",login.user_id);
+        //Log.d("온리쥼","프래그먼트 온리줌");
+        //Log.d("유저 아이디",login.user_id);
 
         RetrofitAPI retrofitAPI = retrofit.create(RetrofitAPI.class);
         Call<String> comment = retrofitAPI.inquiryUserData(login.user_id);   //아이디 보내주기

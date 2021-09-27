@@ -23,6 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".photoediting.EditImageActivity"/>
         <activity android:name=".activity.friendsFeed" />
         <activity android:name=".activity.register" />
         <activity android:name=".activity.new_post_add_page"/>

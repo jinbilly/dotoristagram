@@ -58,7 +58,7 @@ public class new_post_add_page extends AppCompatActivity {
     //상단 액션 바에 메뉴 생성
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.complete_menu, menu);
+        getMenuInflater().inflate(R.menu.complite_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -76,7 +76,7 @@ public class new_post_add_page extends AppCompatActivity {
         int id = item.getItemId();
 
         //상단 완료 눌렀을때
-        if (id == R.id.action_complete) {
+        if (id == R.id.action_complite) {
             //게시물 추가시 글자와 사진이 서버에 올라간다.
 
 
